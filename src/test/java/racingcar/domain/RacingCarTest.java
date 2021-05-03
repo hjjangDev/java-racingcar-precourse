@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RacingCarTest {
     Cars cars = new Cars();
-
     Racing racing = new Racing();
 
     @Test
