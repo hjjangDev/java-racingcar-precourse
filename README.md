@@ -1,4 +1,7 @@
 ## 주요 기능 목록
+* java-racingcar-precourse/src/main/java
+    - /RacingcarApplication.java : 자동차 경주 게임 main 메소드로 Game을 호출하여 게임을 시작한다.
+    
 * java-racingcar-precourse/src/main/java/racingcar/domain
     - /car/Name.java : Car의 이름 관리
     - /car/Position.java : Car의 위치 관리
