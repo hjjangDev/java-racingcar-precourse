@@ -14,8 +14,8 @@
     - /InvalidUserInputException.java : 사용자 입력 값에 대한 exception 처리
     
 * java-racingcar-precourse/src/main/java/racingcar/domain
-    - /car/Name.java : Car의 이름 관리
-    - /car/Position.java : Car의 위치 관리
+    - /car/Name.java : Car의 name을 관리한다.
+    - /car/Position.java : Car의 position 관리한다. (Atomic Type 사용)
     - /car/Car.java : 자동차 경주 게임에 참여하는 자동차
     - /car/Cars.java : 자동차 경주 게임에 참여하는 모든 자동차들의 List
 
