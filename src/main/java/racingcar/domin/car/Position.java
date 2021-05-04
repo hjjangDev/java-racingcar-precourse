@@ -3,23 +3,24 @@ package racingcar.domin.car;
 import util.ValidationUtil;
 
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Position {
-    private int position;
+    private AtomicInteger position = new AtomicInteger();
 
     public static int defaultDistance = 0;
     public static int forwardDistance = 1;
 
     public Position() {
-        this.position = 0;
+        this.position = new AtomicInteger();
     }
 
     public Position(int position) {
-        this.position = position;
+        this.position.set(position);
     }
 
     public int getValue() {
-        return position;
+        return position.get();
     }
 
     public boolean isMove() {
@@ -28,7 +29,7 @@ public class Position {
 
     public void setPosition(int position) {
         ValidationUtil.validatePosition(position);
-        this.position += position;
+        this.position.accumulateAndGet(position, (x, y) -> (x + y));
     }
 
     public void moveForward() {
