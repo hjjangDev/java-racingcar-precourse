@@ -25,6 +25,7 @@ public class ValidationUtil {
             throw new InvalidCarException(CAR_DUPLICATE_MESSAGE);
         }
     }
+
     public static void validatePosition(int position) {
         if (position < Position.defaultDistance || Position.forwardDistance < position) {
             throw new InvalidCarException(CAR_DISTANCE_MESSAGE);
@@ -32,7 +33,7 @@ public class ValidationUtil {
     }
 
     public static void checkBlank(String name) {
-        if (name==null || StringUtils.isBlank(name.trim())) {
+        if (name == null || StringUtils.isBlank(name.trim())) {
             throw new InvalidCarException(CAR_NAME_BLANK_MESSAGE);
         }
     }
