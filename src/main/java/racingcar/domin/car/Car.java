@@ -5,6 +5,8 @@ public class Car {
     private Name name;
     private Position position;
 
+    private StringBuilder statusSB = new StringBuilder();
+
     public Car(String name) {
         this.name = new Name(name);
         this.position = new Position();
@@ -31,12 +33,13 @@ public class Car {
     }
 
     private void printCarStatus() {
+        statusSB.setLength(0);
 
-        System.out.print(name.getValue() + " : ");
+        statusSB.append(name.getValue() + " : ");
         for (int i = 0; i < position.getValue(); i++) {
-            System.out.print("-");
+            statusSB.append("-");
         }
-        System.out.println();
+        System.out.println(statusSB);
     }
 
     @Override

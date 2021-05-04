@@ -23,7 +23,7 @@ public class Game {
     }
 
     private void startRacing() {
-        System.out.println("실행 결과");
+        System.out.println("\n실행 결과");
         for (int i = 0; i < racingTime; i++) {
             racing.movePosition(cars);
         }
